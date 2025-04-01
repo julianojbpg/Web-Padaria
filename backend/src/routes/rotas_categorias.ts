@@ -10,7 +10,7 @@ import {
 
 const rotas_categoria = Router()
 
-rotas_categoria.get('/categorias', autenticationUser, async (req: Request, res: Response) => {
+rotas_categoria.get('/categorias', async (req: Request, res: Response) => {
     await get_All_Category(req, res)
 })
 
@@ -18,7 +18,7 @@ rotas_categoria.post('/cadastrarCategoria', autenticationUser, async (req: Reque
     await insert_Category(req, res)
 })
 
-rotas_categoria.post('/buscarCategoria', autenticationUser, async (req: Request, res: Response) => {
+rotas_categoria.post('/buscarCategoria', async (req: Request, res: Response) => {
     await get_Category(req, res)
 })
 

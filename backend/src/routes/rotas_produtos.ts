@@ -10,7 +10,7 @@ import { autenticationUser } from '../middlewares/auth_jwtToken'
 
 const rotas_produtos = Router()
 
-rotas_produtos.get('/produtos', autenticationUser, async (req: Request, res: Response) => {
+rotas_produtos.get('/produtos', async (req: Request, res: Response) => {
     await get_All_Products(req, res)
 })
 
@@ -18,7 +18,7 @@ rotas_produtos.post('/cadastrarProduto', autenticationUser, async (req: Request,
     await insert_Products(req, res)
 })
 
-rotas_produtos.post('/buscarProduto', autenticationUser, async (req: Request, res: Response) => {
+rotas_produtos.post('/buscarProduto', async (req: Request, res: Response) => {
     await get_Product(req, res)
 })
 

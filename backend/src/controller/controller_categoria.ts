@@ -1,5 +1,5 @@
 import { Request, Response } from 'express'
-import { iCategoria, iResponseGlobal, STATUSCODE } from '../../@types/types'
+import { iCategoria, iResponseGlobal, STATUSCODE } from '../../../types/types'
 import { validarId, validarCategoria } from '../validation/validation_categoria'
 import * as yup from 'yup'
 import {

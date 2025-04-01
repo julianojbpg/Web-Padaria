@@ -1,4 +1,4 @@
-import { iProduto } from "../../@types/types"
+import { iProduto } from "../../../types/types"
 import * as yup from 'yup'
 
 

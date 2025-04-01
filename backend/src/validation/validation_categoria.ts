@@ -1,4 +1,4 @@
-import { iCategoria } from "../../@types/types"
+import { iCategoria } from "../../../types/types"
 import * as yup from 'yup'
 
 

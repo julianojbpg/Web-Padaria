@@ -1,4 +1,4 @@
-import { iProduto, iResponseGlobal } from "../../@types/types"
+import { iProduto, iResponseGlobal } from "../../../types/types"
 import prisma from "./prisma"
 
 

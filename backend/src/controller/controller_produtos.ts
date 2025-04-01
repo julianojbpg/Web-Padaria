@@ -1,6 +1,6 @@
 import * as yup from 'yup'
 import { Request, Response } from 'express'
-import { iProduto, iResponseGlobal, STATUSCODE } from '../../@types/types'
+import { iProduto, iResponseGlobal, STATUSCODE } from '../../../types/types'
 import { validarId, validarProduto } from '../validation/validation_produto'
 import {
     InsertProductDB,

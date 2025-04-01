@@ -1,5 +1,5 @@
 import prisma from "./prisma"
-import { iCategoria, iResponseGlobal } from "../../@types/types"
+import { iCategoria, iResponseGlobal } from "../../../types/types"
 
 
 async function insertCategoryDB(categoria: Omit<iCategoria, 'id'>): Promise<iResponseGlobal> {

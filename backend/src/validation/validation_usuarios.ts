@@ -1,4 +1,4 @@
-import { iUsuario } from "../../@types/types"
+import { iUsuario } from "../../../types/types"
 import * as yup from 'yup'
 
 

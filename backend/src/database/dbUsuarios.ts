@@ -1,5 +1,5 @@
 import prisma from "./prisma"
-import { iResponseGlobal, iUsuario } from "../../@types/types"
+import { iResponseGlobal, iUsuario } from "../../../types/types"
 
 
 async function insertUserDB(usuario: Omit<iUsuario, 'id'>): Promise<iResponseGlobal> {

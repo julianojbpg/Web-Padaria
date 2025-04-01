@@ -3,7 +3,7 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import 'dotenv/config'
 import { NextFunction, Request, Response } from 'express'
-import { iLogin, iResponseGlobal, iUsuario, STATUSCODE } from '../../@types/types'
+import { iLogin, iResponseGlobal, iUsuario, STATUSCODE } from '../../../types/types'
 import { validarId, validarEmail, validarUsuario } from '../validation/validation_usuarios'
 import {
     deleteUserDB,

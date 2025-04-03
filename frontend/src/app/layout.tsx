@@ -1,51 +1,43 @@
 import type { Metadata } from "next"
 import "./globals.css"
 import logo from '../assets/logo.png'
-import { User } from 'react-feather'
+import Footer from "@/components/footer/footer"
+import {Inter} from 'next/font/google'
+
+import Image from "next/image"
+import Navegacao from "@/components/nav/nav"
 
 export const metadata: Metadata = {
   title: "Panificadora tj gomes",
   description: "Descrição do meu projeto",
 };
 
+const inter = Inter({subsets: ['latin']})
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
   return (
     <html lang="pt-br">
-      <body>
+      <body className={inter.className}>
         <header>
-        <div className="div-logo">
-            <div className="div-img">
-              <img src={logo.src} alt="TJ Gomes panificadora" className="img" />
-            </div>
-            <div className="div-login">
-              <User color="rgb(231,176,18)" />
-            </div>
-          </div>
-          <div className="div-menu">
-            <h1>Bem vindo</h1>
-            <p>Tradição e vanguarda são as marcas da Panificadora TJ gomes.
-              A qualidade dos produtos é assegurada porque fazemos questão de preservar
-              a fabricação própria, com ingredientes de primeira qualidade
-              e receitas de sucesso.
-            </p>
-            <div className="div-botoes">
-              <button className="button">ENCOMENDAS</button>
-              <button className="button">CARDÁPIO</button>
-              <button className="button">CONTATO</button>
-            </div>
-          </div>
-
+        <Image 
+            src={logo} 
+            alt="TJ Gomes Panificadora" 
+            width={150} // Defina um tamanho adequado
+            height={150} 
+            className="logo-img" // Nome mais específico para evitar conflitos
+            priority // Melhora o carregamento da imagem principal
+          />
+          <h1>Panificadora TJ Gomes</h1>
         </header>
+        <Navegacao />
         <main>{children}</main>
-        <footer>
-          <p>Footer</p>
-        </footer>
+        <Footer />
       </body>
     </html>
-  );
+  )
 }
-

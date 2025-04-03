@@ -1,5 +1,28 @@
-.page {
- width: 90%;
- height: 0%;
- background-color: bisque;
-}
+.container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .embla {
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px; /* Ajuste conforme necessário */
+  }
+  
+  .embla__container {
+    display: flex;
+    gap: 10px; /* Espaçamento entre os slides */
+  }
+  
+  .embla__slide {
+    flex: 0 0 calc(33.33% - 10px); /* Divide o espaço de forma exata */
+    min-width: calc(33.33% - 10px); /* Garante que os slides encaixem sem cortes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
